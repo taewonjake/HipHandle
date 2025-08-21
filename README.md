@@ -192,23 +192,37 @@ npm start
 
 ## 6. Flowchart
 
-```
-Home
-  └─ [시작하기] → /generate
-      ├─ 입력(이름/별명/생일/문장)
-      ├─ 힙 레벨 조절
-      └─ 규칙 선택(체크박스)
-            ↓ submit
-        generateCandidates(input)
-          ├─ baseSeeds 구성
-          ├─ 선택 규칙만 체인화(힙 레벨→규칙 수)
-          ├─ 적용된 규칙만 태그 기록
-          └─ 정규화(허용문자 필터)
-            ↓
-        /results
-          ├─ 후보 6개 렌더
-          ├─ 태그 표시 + 복사
-          └─ [다시 생성하기] → 동일 입력 재생성
+```mermaid
+flowchart LR
+  %% 방향: 좌→우
+  H([Home])
+  H --> G[/시작하기 → /generate/]
+
+  subgraph Generate["Generate (입력)"]
+    direction LR
+    I1[입력: 이름/별명/생일/문장]
+    I2[힙 레벨 조절]
+    I3[규칙 선택(체크박스)]
+  end
+
+  G --> I1 --> I2 --> I3 --> S{submit}
+  S --> GC[generateCandidates(input)]
+  GC --> B[baseSeeds 구성]
+  B --> C[선택 규칙만 체인화<br/>(힙 레벨→규칙 수)]
+  C --> T[적용된 규칙만 태그 기록]
+  T --> N[정규화<br/>[a-z0-9._-] 필터]
+
+  subgraph Results["Results (결과)"]
+    direction LR
+    R1[/ /results /]
+    R2[후보 6개 렌더]
+    R3[태그 표시 + 복사]
+    R4[다시 생성하기]
+  end
+
+  N --> R1 --> R2 --> R3
+  R4 -. 동일 입력 재생성 .- GC
+
 ```
 
 ---
