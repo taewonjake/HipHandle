@@ -1,0 +1,63 @@
+/* 페이지 래퍼: 화면을 꽉 채우고 푸터를 하단에 붙임 */
+.page {
+  min-height: 100svh;            /* 모바일 주소창 대응 */
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;           /* 혹시 생기는 빈틈 대비: 바탕 어둡게 */
+}
+
+/* 히어로: 남는 공간을 모두 차지 */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 96px 20px 64px;
+  color: #ffffff;
+  background:
+    radial-gradient(1200px 400px at 20% 0%, rgba(255,255,255,0.08), transparent),
+    linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+}
+
+.title {
+  font-size: clamp(28px, 6vw, 56px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+.highlight { color: #f5d10d; }
+
+.sub {
+  margin: 0 auto 28px;
+  max-width: 720px;
+  font-size: clamp(14px, 2.2vw, 18px);
+  opacity: 0.95;
+}
+
+/* CTA 버튼(노란 알약) */
+.cta {
+  background: #f5d10d !important;
+  color: #111827 !important;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  font-size: 16px;
+  margin-top: 8px;
+  transform: translateZ(0);
+}
+.cta:hover { transform: translateY(-1px) scale(1.03); }
+
+/* 푸터 */
+.footer { background: #0b1222; color: #e5e7eb; padding: 48px 20px; }
+.footerInner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { height: 28px; }
+.desc { opacity: 0.85; font-size: 14px; }
+.socials a { display: inline-flex; padding: 8px; font-size: 18px; opacity: 0.9; }
+.socials a:hover { opacity: 1; transform: scale(1.06); }
+.copy { text-align: center; font-size: 12px; opacity: 0.6; margin-top: 20px; }

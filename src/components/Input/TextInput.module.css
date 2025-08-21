@@ -1,0 +1,9 @@
+.wrap { display:block; width:100%; }
+.label { display:block; margin-bottom:8px; font-weight:600; }
+.input {
+  width:100%; padding:12px 14px; border-radius:10px;
+  border:1px solid var(--gray-300); background: #fff;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.input:hover { border-color: var(--purple-400); }
+.input:focus { border-color: var(--purple-500); box-shadow: 0 0 0 3px rgba(139,92,246,.2); outline:none; }

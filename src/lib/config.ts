@@ -1,0 +1,1 @@
+export const DEFAULT_CANDIDATE_COUNT = 6;

@@ -1,0 +1,4 @@
+.wrap { width:100%; }
+.row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-weight:600; }
+.percent { font-weight:800; }
+.slider { width:100%; accent-color: var(--purple-600); }

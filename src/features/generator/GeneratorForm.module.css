@@ -1,0 +1,255 @@
+/* 배경 + 레이아웃 */
+.page {
+  min-height: 100svh;
+  background: linear-gradient(180deg, #f2f4ff 0%, #f7f7ff 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Topbar (홈 버튼 영역) ===== */
+.topbar {
+  position: sticky; /* 스크롤해도 상단 고정 */
+  top: 0;
+  z-index: 30;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid #eef2f7;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+  text-decoration: none;
+}
+.brandLogo {
+  height: 22px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 24px auto 80px;
+  padding: 0 20px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(22px, 3.8vw, 36px);
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin: 12px 0 8px;
+}
+.sub {
+  text-align: center;
+  color: #64748b;
+  margin: 0 0 24px;
+}
+
+/* 카드 */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(20, 20, 43, 0.08);
+  padding: 28px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 720px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  margin-bottom: 20px;
+}
+.label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0f172a;
+}
+.required {
+  color: #ef4444;
+  margin-left: 4px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  color: #111827;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.input:focus,
+.textarea:focus {
+  background: #fff;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.22);
+}
+
+.textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+.counter {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* 생년월일 */
+.dateRow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+.signBtn {
+  border: 1px solid #e5e7eb;
+  background: #f1f5f9;
+  color: #334155;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.signBtn:hover {
+  background: #e9eef5;
+}
+.dateInput {
+  padding-right: 42px;
+}
+.icon {
+  margin-left: -40px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* 슬라이더 */
+.sliderWrap {
+}
+.sliderRow {
+  display: flex;
+  justify-content: space-between; /* 좌/중앙/우측 끝으로 배치 */
+  align-items: center;
+  color: #475569;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.percent {
+  font-weight: 700;
+  color: #6d28d9;
+  text-align: center;
+  min-width: 56px; /* 좌우 균형 유지 */
+}
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #6d28d9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 규칙 카드 */
+.radioGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 720px) {
+  .radioGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ruleCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  border-radius: 12px;
+  color: #111827;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.08s ease;
+}
+.ruleCard:hover {
+  background: #ffffff;
+  border-color: #c7d2fe;
+  transform: translateY(-1px);
+}
+.ruleChecked {
+  border-color: #a78bfa;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.18);
+}
+.ruleTitle {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.ruleDesc {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.checkCircle {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 2px solid #cbd5e1;
+  display: inline-block;
+}
+.checkOn {
+  border-color: #7c3aed;
+  background: radial-gradient(circle at 50% 50%, #7c3aed 0 6px, transparent 7px);
+}
+
+/* 제출 버튼 */
+.submitWrap {
+  text-align: center;
+  margin-top: 8px;
+}
+.submitBtn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 0;
+  color: #fff;
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
+  box-shadow: 0 10px 16px rgba(124, 58, 237, 0.25);
+}
+.submitBtn:hover {
+  transform: translateY(-1px);
+}
+/* 상단 여백 제거(전역 오버라이드) */
+:global(html, body, #root) { height: 100%; }
+:global(body) { margin: 0; }                  /* 기본 body margin 제거 */
+:global(main) { padding-top: 0 !important; }  /* 레이아웃 main의 상단 패딩 무효화 */

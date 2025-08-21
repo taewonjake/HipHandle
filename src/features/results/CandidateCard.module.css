@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:16px;
+  padding:18px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.12); }
+
+.iconCopy {
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:#fff;
+  border:1px solid var(--gray-200);
+  border-radius:8px;
+  padding:6px;
+  cursor:pointer;
+  color:#6b7280; /* gray-500 */
+}
+.iconCopy:hover { color:#4f46e5; border-color:#d1d5db; }
+
+.handle {
+  font-weight:800;
+  margin-top:8px;
+  margin-bottom:12px;
+  font-size:1.06rem;
+  color:#111827;
+  min-height: 1.5em;
+}
+
+.tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+
+.copy {
+  width:100%;
+  background:#f3f4f6; /* light gray fill */
+  border-color:#e5e7eb !important;
+}
+.copy:hover { border-color:#c7d2fe !important; }

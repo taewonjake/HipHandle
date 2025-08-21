@@ -1,0 +1,10 @@
+.tag {
+  display:inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 600;
+  background: #f3e8ff; /* light purple */
+  border: 1px solid #e9d5ff;
+  color: #7c3aed; /* purple-600 */
+}
