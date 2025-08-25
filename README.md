@@ -220,10 +220,34 @@ flowchart LR
   N --> R1 --> R2 --> R3
   R4 -. 동일 입력 재생성 .- GC
 ```
+---
+## 7. UI
+- **PC**
+  <img width="1918" height="907" alt="Image" src="https://github.com/user-attachments/assets/e6c0c1e9-2da1-465a-8168-955377151063" />
+
+  ![Image](https://github.com/user-attachments/assets/dcfb3337-0704-44b7-b542-dc996e15a04b)
+
+  <img width="1912" height="905" alt="Image" src="https://github.com/user-attachments/assets/dedced45-7713-4e18-9433-4d4fddf482ed" />
+
+- **모바일**
+  ![Image](https://github.com/user-attachments/assets/eb6532b5-8797-4a40-bdd6-8c2004eb9ea0)
+
+  ![Image](https://github.com/user-attachments/assets/886f64c1-db24-485d-b8e9-9e91070e10c5)
+
+  ![Image](https://github.com/user-attachments/assets/51488742-cd29-4c04-89a6-54be3d0b8ba1)
+
+---
+## 8. 기능
+- **랜딩페이지**
+  ![Image](https://github.com/user-attachments/assets/1b77c8d5-c38c-4238-b46b-ca3e410ccd9b)
+- **정보 입력, 체크박스, 토글 조정**
+  ![Image](https://github.com/user-attachments/assets/44754fac-2316-4c1a-9108-7923823220fb)
+-**재생성, 클립보드 복사**
+  ![Image](https://github.com/user-attachments/assets/21ca09fd-28de-4155-b41a-41433f15e51d)
 
 ---
 
-## 7. 향후 개선 방향
+## 9. 향후 개선 방향
 
 - **SNS별 가용성 체크**(중복/금칙어)  
 - **프리셋**: 규칙 묶음(“읽기 쉬운/극한 힙/미니멀”)  
@@ -233,7 +257,7 @@ flowchart LR
 
 ---
 
-## 8. 참고
+## 10. 참고
 
 - `lib/config.ts`  
   - `DEFAULT_CANDIDATE_COUNT = 6` (기본 생성 개수)
