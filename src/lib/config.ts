@@ -1,1 +1,1 @@
-export const DEFAULT_CANDIDATE_COUNT = 6;
+export const DEFAULT_CANDIDATE_COUNT = 6;//결과 최대 생성 개수

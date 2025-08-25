@@ -1,3 +1,4 @@
+//타입 지정
 export type RuleId =
   | "initialLetters" | "leet" | "reverse" | "nickname"
   | "hangulQwerty" | "birthdayInsert" | "keyboardMash"

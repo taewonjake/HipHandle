@@ -6,7 +6,7 @@ import { generateCandidates } from "../../core/generator";
 import { useGeneratorStore } from "../../store/generatorStore";
 import type { RuleId } from "../../core/types";
 
-type LocalState = {
+type LocalState = {//입력 정보 타입 정의
   name: string;
   nickname: string;
   birthday: string;
@@ -15,7 +15,7 @@ type LocalState = {
   selectedRules: RuleId[];
 };
 
-const RULES: { id: RuleId; title: string; desc: string }[] = [
+const RULES: { id: RuleId; title: string; desc: string }[] = [//변환규칙 목록 정의
   { id: "initialLetters", title: "앞글자 따오기", desc: "문장의 첫 글자 추출" },
   { id: "leet", title: "알파벳→숫자 치환", desc: "l→1, e→3, o→0 등" },
   { id: "reverse", title: "거꾸로 쓰기", desc: "이름이나 단어를 뒤집기" },
@@ -30,19 +30,19 @@ export default function GeneratorForm() {
   const nav = useNavigate();
   const { input, setInput, setCandidates } = useGeneratorStore();
 
-  const [local, setLocal] = useState<LocalState>({
+  const [local, setLocal] = useState<LocalState>({//local-사용자 입력데이터, setlocal-상태를 업데이트 하는 함수
     name: input.name || "",
     nickname: input.nickname || "",
     birthday: input.birthday || "",
     favoriteText: input.favoriteText || "",
-    hipLevel: input.hipLevel ?? 50,
-    selectedRules: (input.selectedRules || ["initialLetters", "nickname"]) as RuleId[],
+    hipLevel: input.hipLevel ?? 50,//힙레벨 기본값
+    selectedRules: (input.selectedRules || ["initialLetters", "nickname"]) as RuleId[],//규칙 선택 기본값
   });
 
   const update = (patch: Partial<LocalState>) => setLocal((p) => ({ ...p, ...patch }));
   const favLen = local.favoriteText?.length ?? 0;
 
-  const toggleRule = (id: RuleId) => {
+  const toggleRule = (id: RuleId) => {//규칙선택 토글
     setLocal((prev) => ({
       ...prev,
       selectedRules: prev.selectedRules.includes(id)
@@ -51,7 +51,7 @@ export default function GeneratorForm() {
     }));
   };
 
-  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {//폼 제줄 처리
     e.preventDefault();
     const results = generateCandidates(local as any);
     setInput(local as any);

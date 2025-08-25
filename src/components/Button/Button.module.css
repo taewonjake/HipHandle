@@ -6,9 +6,19 @@
   font-weight: 700;
   cursor: pointer;
 }
-.primary { background: var(--purple-600); color: #fff; }
-.outline { background: #fff; color: var(--purple-700); border-color: var(--gray-300); }
-.ghost { background: transparent; color: #111827; }
+.primary { 
+  background: var(--purple-600); 
+  color: #fff; 
+}
+.outline { 
+  background: #fff; 
+  color: var(--purple-700); 
+  border-color: var(--gray-300); 
+}
+.ghost { 
+  background: transparent; 
+  color: #111827; 
+}
 
 .btn:hover {
   transform: scale(1.03);

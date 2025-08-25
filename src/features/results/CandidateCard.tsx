@@ -8,7 +8,7 @@ type Props = { handle: string; tags: string[] };
 export default function CandidateCard({ handle, tags }: Props) {
   const { copy } = useClipboard();
   const doCopy = async () => {
-    const ok = await copy(handle);
+    const ok = await copy(handle);//실행까지 기다림
     if (ok) alert("복사되었습니다!");
   };
   return (

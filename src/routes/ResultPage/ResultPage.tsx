@@ -7,7 +7,7 @@ import { generateCandidates } from "../../core/generator";
 
 export default function ResultPage(){
   const { input, candidates, setCandidates } = useGeneratorStore();
-  const reroll = () => {
+  const reroll = () => {//재생성 함수
     const res = generateCandidates(input);
     setCandidates(res);
   };

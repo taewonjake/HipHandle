@@ -5,7 +5,7 @@ import { generateCandidates } from "../../core/generator";
 
 export default function RerollBar(){
   const { input, setCandidates } = useGeneratorStore();
-  const reroll = () => {
+  const reroll = () => {//누르면 함수 다시 실행
     const res = generateCandidates(input);
     setCandidates(res);
   };
