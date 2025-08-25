@@ -243,9 +243,11 @@ flowchart LR
   ![Image](https://github.com/user-attachments/assets/1b77c8d5-c38c-4238-b46b-ca3e410ccd9b)
 
 - **정보 입력, 체크박스, 토글 조정**
+
   ![Image](https://github.com/user-attachments/assets/44754fac-2316-4c1a-9108-7923823220fb)
 
 - **재생성, 클립보드 복사**
+
   ![Image](https://github.com/user-attachments/assets/21ca09fd-28de-4155-b41a-41433f15e51d)
 
 ---
